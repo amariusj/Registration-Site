@@ -8,7 +8,7 @@ import CallOutButton from './CallOutButton';
 import SignUpForm from './SignUpForm';
 import Footer from './Footer';
 import FormModal from './FormModal';
-import Confirmation from './Confirmation';
+import ConfirmationModal from './ConfirmationModal';
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
       </div>
 
       <FormModal />
-      <Confirmation />
+      <ConfirmationModal />
     </div>
   );
 }

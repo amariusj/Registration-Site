@@ -3,6 +3,8 @@ import React from 'react';
 const Topic = () => {
   return(
     <React.Fragment>
+      <hr className="my-4"></hr>
+      <h5 className="mb-4">Topics:</h5>
       <div className="custom-control custom-checkbox mr-sm-2 mb-3">
         <input type="checkbox" className="custom-control-input" id="frameworks"></input>
         <label className="custom-control-label" htmlFor="frameworks">JavaScript Frameworks</label>

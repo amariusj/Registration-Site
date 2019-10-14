@@ -15,6 +15,7 @@ export class Provider extends Component {
 
   state = {
     logo: logo,
+    total: 0,
     speakers: [
       {
         name: "Ecma Scriptnstuff",
@@ -55,59 +56,8 @@ export class Provider extends Component {
     ]
   };
 
-  componentDidMount() {
-    this.intervalID = this.hide(document.getElementById('other'));
-  }
-
   focus = (firstInput) => {
     setTimeout(() => firstInput.focus(), 500);
-  }
-
-  hide = (element) => {
-    element.style.display = "none";
-  }
-
-  show = (element) => {
-    element.style.display = "block";
-  }
-
-  showOrHide = (event) => {
-    if (event.target.value === "other") {
-      this.show(document.getElementById('other'));
-    } else {
-      this.hide(document.getElementById('other'));
-    }
-  }
-
-
-  //
-
-  checkDisable = (event) => {
-    if (event.target.checked === true
-       && event.target.nextSibling.textContent.includes('Tuesday 9am-12pm')) {
-      let fieldset = event.target.parentNode.parentNode;
-      for (let i = 0; i < fieldset.children.length; i++) {
-        let input = fieldset.children[i].children[0];
-        let label = fieldset.children[i].children[1];
-        if (input.checked === false
-           && label.textContent.includes('Tuesday 9am-12pm')
-      ) { input.setAttribute('disabled', true) }
-      }
-    } else  if (event.target.checked === true
-      && event.target.nextSibling.textContent.includes('Tuesday 1pm-4pm')){
-      let fieldset = event.target.parentNode.parentNode;
-      for (let i = 0; i < fieldset.children.length; i++) {
-        let input = fieldset.children[i].children[0];
-        let label = fieldset.children[i].children[1];
-        if ( input.checked === false
-          && label.textContent.includes('Tuesday 1pm-4pm')
-        ) { input.setAttribute('disabled', true) }
-      }
-  //  } else if () {
-      //event is unchecked, then remove the disabled attribute with removeAttribute
-  //  } else if () {
-      //event is unchecked, then remove the disabled attribute with removeAttribute
-    }
   }
 
   render() {
@@ -115,10 +65,13 @@ export class Provider extends Component {
       <SpeakerContext.Provider value={{
         speakers: this.state.speakers,
         logo: this.state.logo,
+        total: this.state.total,
         actions: {
           focus: this.focus,
           showOrHide: this.showOrHide,
-          checkDisable: this.checkDisable
+          checksAndCost: this.checksAndCost,
+          hideOrShow: this.hideOrShow,
+          handleSubmit: this.handleSubmit
         }
       }}>
         { this.props.children }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Consumer } from './Context';
 
+//<button onClick={() => actions.focus(document.getElementById('name'))} type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
+
 const Jumbotron = () => {
   return(
     <Consumer>

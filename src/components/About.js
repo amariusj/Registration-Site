@@ -22,12 +22,12 @@ const About = () => {
             <div className="col-lg order-3">
               <h3 className="mb-4">What You'll Learn</h3>
       				<div className="list-group">
-      				  <a href="#" className="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</a>
-      				  <a href="#" className="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</a>
-                <a href="#" className="list-group-item list-group-item-action"><strong>React</strong>: JavaScript library</a>
-      				  <a href="#" className="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript environment</a>
-      				  <a href="#" className="list-group-item list-group-item-action"><strong>ES2015</strong>: Latest version of JavaScript</a>
-      				  <a href="#" className="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript compiler</a>
+      				  <li className="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</li>
+      				  <li className="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</li>
+                <li className="list-group-item list-group-item-action"><strong>React</strong>: JavaScript library</li>
+      				  <li className="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript environment</li>
+      				  <li className="list-group-item list-group-item-action"><strong>ES2015</strong>: Latest version of JavaScript</li>
+      				  <li className="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript compiler</li>
       				</div>
             </div>
           </div>

@@ -6,3 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+#total {
+  transition: .5s
+}

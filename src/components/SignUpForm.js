@@ -6,8 +6,8 @@ const SignUpForm = () => {
       <hr />
       <div className="row py-4 text-muted">
         <div className="col-md col-xl-5">
-          <p><strong>About Treehouse</strong></p>
-          <p>Treehouse brings affordable technology education to people everywhere to help them achieve their dreams and change the world.</p>
+          <p><strong>About Me</strong></p>
+          <p>I bring affordable technology to those who need assistance with achieving their dreams and changing the world.</p>
         </div>
         <div className="col-md col-xl-5 ml-auto">
           <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
