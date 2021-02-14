@@ -60,6 +60,13 @@ export class Provider extends Component {
     setTimeout(() => firstInput.focus(), 500);
   }
 
+  collapse = () => {
+    const menuToggle = document.getElementById('navbarNavAltMarkup')
+    menuToggle.classList.remove("show")
+    menuToggle.classList.add("hide")
+    console.log(menuToggle)
+  }
+
   render() {
     return(
       <SpeakerContext.Provider value={{
@@ -68,6 +75,7 @@ export class Provider extends Component {
         total: this.state.total,
         actions: {
           focus: this.focus,
+          collapse: this.collapse,
           showOrHide: this.showOrHide,
           checksAndCost: this.checksAndCost,
           hideOrShow: this.hideOrShow,
